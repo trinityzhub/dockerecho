@@ -15,6 +15,7 @@ if [ "$DOMAIN_NO" = "" ]; then
    DOMAIN_NO="110"
 fi
 
+<<commentedcode1
 
 echo -e "\n"
 read -p 'Enter  container name (eg: echo1 ): ' CONTAINER_NAME
@@ -23,11 +24,16 @@ if [ "$CONTAINER_NAME" = "" ]; then
    CONTAINER_NAME="echo110"
 fi
 
+commentedcode1
+
+
+CONTAINER_NAME=echo$DOMAIN_NO
+
 
 
 echo $1
 
-docker build  . -t test-$DOMAIN_NO/hello:v0.01 -f $1
+docker build  . -t test$DOMAIN_NO/hello:v0.01 -f $1
 
 
 docker run -d --name $CONTAINER_NAME--rm test-$DOMAIN_NO/hello:v0.01
