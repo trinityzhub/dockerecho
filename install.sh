@@ -6,7 +6,7 @@
 
 
 ## run 
-## source /home/ubbe/CodeBase/DevGit/Github/testing/dockerhello/install.sh home/ubbe/CodeBase/DevGit/Github/testing/dockerhello/Dockerfile
+## source /home/ubbe/CodeBase/DevGit/Github/testing/dockerhello/install.sh /home/ubbe/CodeBase/DevGit/Github/testing/dockerhello/Dockerfile
 
 echo -e "\n"
 read -p 'Enter  DOMAIN_NO (eg: 1 ): ' DOMAIN_NO
@@ -25,7 +25,7 @@ fi
 
 
 
-
+echo $1
 
 docker build  . -t test-$DOMAIN_NO/hello:v0.01 -f $1
 
