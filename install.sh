@@ -60,7 +60,7 @@ echo $1
 docker build  . -t test$DOMAIN_NO/hello:$VERSION_TAG -f $1
 
 
-docker run -d --name $CONTAINER_NAME--rm test-$DOMAIN_NO/hello:$VERSION_TAG
+docker run -d --name $CONTAINER_NAME--rm test$DOMAIN_NO/hello:$VERSION_TAG
 
 
 
