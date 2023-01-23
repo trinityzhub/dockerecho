@@ -43,7 +43,7 @@ select dummy in "${choices[@]}"; do  # present numbered choices to user
     (( choice >= 1 && choice <= ${#choices[@]} )) || { echo "Invalid choice: $choice. Try again." >&2; continue 2; }
     # If valid, echo the choice and its number.
     echo "Choice #$(( ++choiceIncrementor )): ${choices[choice-1]} ($choice)"
-    mychoice==${choices[choice-1]}
+    mychoice=${choices[choice-1]}
   done
   # All choices are valid, exit the prompt.
   break
